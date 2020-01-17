@@ -1,5 +1,5 @@
 # Weatherapp
-from the https://github.com/eficode/weatherapp exercise
+sources: https://github.com/eficode/weatherapp and https://github.com/eficode/docker-katas
 
 There was a beautiful idea of building an app that would show the upcoming weather. The developers wrote a nice backend and a frontend following the latest principles and - to be honest - bells and whistles. However, the developers did not remember to add any information about the infrastructure or even setup instructions in the source code.
 
