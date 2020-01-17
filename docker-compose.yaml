@@ -1,0 +1,27 @@
+version: '3.1'
+
+services:
+  backend:
+    build:
+      context: ./backend
+    image: jeremiaza/kivataka
+    environment:
+      PORT: '9000'
+      MAP_ENDPOINT: 'http://api.openweathermap.org/data/2.5'
+      TARGET_CITY: 'Helsinki,fi'
+    ports:
+      - 9000:9000
+    volumes:
+      - ./backend:/usr/src/app
+  frontend:
+    build:
+      context: ./frontend
+    image: jeremiaza/kivaetu
+    environment:
+      ENDPOINT: 'http://localhost:9000/api'
+    ports:
+      - 8000:8000
+    depends_on:
+      - backend
+    volumes:
+      - ./frontend:/usr/src/app
