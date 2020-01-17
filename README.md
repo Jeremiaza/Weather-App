@@ -47,4 +47,5 @@ After this go to frontend terminal, CTRL-C and:
 --Press ctrl+c once you see: http://127.0.0.1:43661/... etc
 - run: kubectl port-forward -n kubernetes-dashboard service/kubernetes-dashboard --address 0.0.0.0 8080:80
 
-Now go to localhost:8080
+Now go to localhost:8080 and you should see something like this:
+![alt text](https://github.com/Jeremiaza/Weather-App/frontend/src/public/KubeDashBoard.jpg)
