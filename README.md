@@ -44,7 +44,7 @@ Always run backend before frontend.
 
 After this go to frontend terminal, CTRL-C and:
 - run: sudo minikube dashboard
--Press ctrl+c once you see: http://127.0.0.1:43661/... etc
+- Press ctrl+c once you see: http://127.0.0.1:43661/... etc
 - run: kubectl port-forward -n kubernetes-dashboard service/kubernetes-dashboard --address 0.0.0.0 8080:80
 
 Now go to localhost:8080 and you should see something like this:
