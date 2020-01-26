@@ -9,3 +9,5 @@ node_modules
 
 # Variables
 .env
+
+backend/nohup.out
