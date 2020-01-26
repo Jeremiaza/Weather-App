@@ -1,4 +1,5 @@
 # Weatherapp
+sources: https://github.com/eficode/weatherapp and https://github.com/eficode/docker-katas
 
 There was a beautiful idea of building an app that would show the upcoming weather. The developers wrote a nice backend and a frontend following the latest principles and - to be honest - bells and whistles. However, the developers did not remember to add any information about the infrastructure or even setup instructions in the source code.
 
@@ -6,8 +7,8 @@ Luckily we now have [docker compose](https://docs.docker.com/compose/) saving us
 
 ## New features
 
--added Geolocation API for getting the weather of your nearest station
--added docker, docker-compose and kubernetes deployments
+- added Geolocation API for getting the weather of your nearest station
+- added docker, docker-compose and kubernetes deployments
 
 ## Prerequisites
 
@@ -41,3 +42,11 @@ and try again
 Now go to localhost:8000, click allow to your location and click "Get the weather"
 
 Always run backend before frontend.
+
+After this go to frontend terminal, CTRL-C and:
+- run: sudo minikube dashboard
+- Press ctrl+c once you see: http://127.0.0.1:43661/... etc
+- run: kubectl port-forward -n kubernetes-dashboard service/kubernetes-dashboard --address 0.0.0.0 8080:80
+
+Now go to localhost:8080 and you should see something like this:
+![alt text](https://github.com/Jeremiaza/Weather-App/blob/master/frontend/src/public/KubeDashBoard.jpg)
